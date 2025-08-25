@@ -40,7 +40,18 @@
     .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
     .grid .card h3 { margin:0 0 8px; font-size:18px; }
     .grid .card p { margin:0; color:var(--muted); font-size:14px; }
-    .tag { display:inline-flex; padding:6px 10px; border-radius:999px; background: linear-gradient(90deg, var(--brand), #8ad1ff); color:#0b1220; border:none; font-size:12px; }
+  .tag {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 14px;
+  border-radius:999px;
+  background: linear-gradient(90deg, var(--brand), #8ad1ff);
+  color:#0b1220; /* dark text for contrast */
+  font-weight:600;
+  font-size:13px;
+  border:none;
+}
     .section { margin: 30px 0; }
     ul.clean { list-style:none; padding-left:0; margin:0; }
     ul.clean li { margin:8px 0; color: var(--muted); }
