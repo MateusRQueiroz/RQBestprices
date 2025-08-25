@@ -50,6 +50,20 @@
     .kpis .num { font-weight:800; font-size:22px; }
     @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .grid { grid-template-columns: repeat(2, 1fr); } .kpis { grid-template-columns: repeat(2,1fr); } }
     @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+
+    /* NEW: custom background for Focus Categories card */
+    .focus-card {
+      background: linear-gradient(135deg, #6aa7ff, #8ad1ff);
+      color: #0b1220;
+    }
+    .focus-card .tag {
+      background: rgba(255,255,255,.2);
+      color: #fff;
+      border-color: rgba(255,255,255,.4);
+    }
+    .focus-card ul li {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -68,7 +82,8 @@
           <a class="btn ghost" href="mailto:contact@rqbestprice.com">Contact us</a>
         </div>
       </div>
-      <div class="card">
+      <!-- Changed: added class focus-card -->
+      <div class="card focus-card">
         <span class="tag">Focus Categories</span>
         <ul class="clean" style="margin-top:12px">
           <li>• Toys & Games</li>
@@ -114,13 +129,7 @@
     </footer>
   </div>
 
-  <!--
-    HOW TO USE
-    1) Replace placeholders like RQ Bestprices, {{AMAZON_STORE_URL}}, etc.
-    2) Host this file anywhere (e.g., Netlify, GitHub Pages, your domain) OR
-       embed the hosted URL inside Google Sites (Insert → Embed → By URL).
-    3) If you prefer building natively in Google Sites, copy each section's text.
-  -->
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
