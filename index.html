@@ -16,15 +16,15 @@
       --radius: 18px;
     }
     * { box-sizing: border-box; }
-    body { 
-      margin:0; 
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; 
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(106,167,255,.18), transparent),
-                 linear-gradient(180deg, #0b1220 0%, #0b1220 30%, #0b1220 100%);
-      color: var(--fg); 
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: radial-gradient(1200px 600px at 10% -10%, rgba(106,167,255,.18), transparent),
+              linear-gradient(180deg, #0b1220 0%, #0b1220 30%, #0b1220 100%);
+           color: var(--fg); }
+    a:link {
+      color: white;
     }
-    a:link { color: white; }
-    a:visited { color: rgb(225, 215, 215); }
+    a:visited {
+      color: rgb(225, 215, 215);
+    }
     .wrap { max-width: 1080px; margin: 0 auto; padding: 28px; }
     header { display:flex; align-items:center; justify-content:space-between; gap:16px; }
     .logo { font-weight: 800; letter-spacing:.3px; font-size: 22px; }
@@ -50,20 +50,6 @@
     .kpis .num { font-weight:800; font-size:22px; }
     @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .grid { grid-template-columns: repeat(2, 1fr); } .kpis { grid-template-columns: repeat(2,1fr); } }
     @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
-
-    /* ✅ NEW: custom background for Focus Categories card only */
-    .focus-card {
-      background: linear-gradient(135deg, #6aa7ff, #8ad1ff); /* bright background */
-      color: #0b1220; /* dark text for contrast */
-    }
-    .focus-card .tag {
-      background: rgba(255,255,255,.2);
-      color: #fff;
-      border-color: rgba(255,255,255,.4);
-    }
-    .focus-card ul li {
-      color: #fff;
-    }
   </style>
 </head>
 <body>
@@ -82,8 +68,7 @@
           <a class="btn ghost" href="mailto:contact@rqbestprice.com">Contact us</a>
         </div>
       </div>
-      <!-- Changed: added focus-card class ONLY here -->
-      <div class="card focus-card">
+      <div class="card">
         <span class="tag">Focus Categories</span>
         <ul class="clean" style="margin-top:12px">
           <li>• Toys & Games</li>
@@ -91,7 +76,7 @@
           <li>• DVDs & Video Games</li>
           <li>• Beauty & Personal Care</li>
         </ul>
-        <div style="margin-top:16px; font-size:14px;">We are expanding our catalog and seeking long-term distributor partnerships.</div>
+        <div style="margin-top:16px; color:var(--muted); font-size:14px;">We are expanding our catalog and seeking long-term distributor partnerships.</div>
       </div>
     </section>
 
@@ -129,8 +114,13 @@
     </footer>
   </div>
 
+  <!--
+    HOW TO USE
+    1) Replace placeholders like RQ Bestprices, {{AMAZON_STORE_URL}}, etc.
+    2) Host this file anywhere (e.g., Netlify, GitHub Pages, your domain) OR
+       embed the hosted URL inside Google Sites (Insert → Embed → By URL).
+    3) If you prefer building natively in Google Sites, copy each section's text.
+  -->
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
-
